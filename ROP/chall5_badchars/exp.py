@@ -1,9 +1,5 @@
 from pwn import *
 
-def xorByTwo(value):
-    result = ''.join(chr(ord(c) ^ 2) for c in value)
-    return result
-
 r = process("./badchars")
 #gdb.attach(r, api = True)
 
